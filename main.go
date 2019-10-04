@@ -54,3 +54,12 @@ func variableExample2() {
 	var c, python, java = true, false, "no!"
 	fmt.Println(ice, jock, c, python, java)
 }
+
+//short variable declaration
+func variableExample3() {
+	var i, j int = 1, 2                   // initialization with var (can be used in package level & function level)
+	k := 3                                //no need to declare var (Only can be used inside a function)
+	c, python, java := true, false, "no!" //multiple value initialization without var  (Only can be used inside a function)
+
+	fmt.Println(i, j, k, c, python, java)
+}
