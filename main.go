@@ -80,3 +80,15 @@ func variablewithrange() {
 	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
 	fmt.Printf("Type: %T Value: %v\n", z, z)
 }
+
+//Type inference
+func typeInference() {
+	var i int
+	j := i // j is an int (if j has no type then j will be type of i)
+
+	iceream := 42           // int (this variable will be typed based on precision of the constant)
+	fork := 3.142           // float64 (this variable will be typed based on precision of the constant)
+	complex := 0.867 + 0.5i // complex128 (this variable will be typed based on precision of the constant)
+
+	fmt.Println(i, j, iceream, fork, complex)
+}
