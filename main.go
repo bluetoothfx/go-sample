@@ -32,7 +32,8 @@ func main() {
 	//fmt.Println(result)
 	//fmt.Println(result2)
 	//constants()
-	switchCase()
+	//switchCase()
+	deferStacking()
 }
 
 //calling a function
@@ -158,4 +159,20 @@ func switchCase() {
 		// plan9, windows...
 		fmt.Printf("%s.\n", os)
 	}
+}
+
+//using Defer
+func deferKeyword() {
+	defer fmt.Println("world")
+	fmt.Println("hello")
+}
+
+//stacking Defer
+//will return LIFO order
+func deferStacking() {
+	fmt.Println("counting")
+	for index := 0; index < 10; index++ {
+		defer fmt.Println(index)
+	}
+	fmt.Println("done!")
 }
